@@ -1,5 +1,6 @@
-# Go
-#### Connor Runyan & Jordan Siaha
+# Go: A Language Exploration
+#### Authors: Connor Runyan & Jordan Siaha
+#### Compiler Used: [golang.org](https://golang.org/dl/)
 
 ## History
 
