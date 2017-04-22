@@ -1,18 +1,18 @@
-## Go
+# Go
 ### Connor Runyan & Jordan Siaha
 
 ## History
 
-# Paradigm
+## Paradigm
 
-# Typing System
+## Typing System
 
-# Control Structures
+## Control Structures
 
-# Support For Data Abstractions
+## Support For Data Abstractions
 
-# Syntax
+## Syntax
 
-# Semantics
+## Semantics
 
-# Desirable Language Characteristics
+## Desirable Language Characteristics
