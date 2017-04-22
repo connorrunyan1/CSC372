@@ -1,2 +1,2 @@
-#Go
+## Go
 ### Connor Runyan & Jordan Siaha
