@@ -28,7 +28,6 @@ if(code.isWritten()){
 }
 ```
 ## References
--ref 1
--ref 2
--ref 3
--ref 4
+* [The Go Language Project Frequently Asked Questions](https://golang.org/doc/faq)
+* Reference 2
+* Reference 3
