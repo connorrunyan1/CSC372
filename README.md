@@ -28,6 +28,6 @@ if(code.isWritten()){
 }
 ```
 ## References
-* [The Go Language Project Frequently Asked Questions](https://golang.org/doc/faq)
+* [The Go Language Project: Frequently Asked Questions](https://golang.org/doc/faq)
 * [Go at Google: Language Design in the Service of Software Engineering](https://talks.golang.org/2012/splash.article)
 * Reference 3
