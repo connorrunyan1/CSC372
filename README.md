@@ -1,5 +1,5 @@
 # Go
-### Connor Runyan & Jordan Siaha
+#### Connor Runyan & Jordan Siaha
 
 ## History
 
@@ -17,4 +17,12 @@
 
 ## Desirable Language Characteristics
 
-## Example Program - - Un-Weighted _k_ Nearest Neighbors
+## Example Program
+#### Un-Weighted _k_ Nearest Neighbors
+```
+if(code.isWritten()){
+  this.replace(code);
+} else {
+  code.write();
+}
+```
