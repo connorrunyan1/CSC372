@@ -5,6 +5,12 @@
 ## History
 Go started originally as a personal side-project of a group of Google Engineers named Robert Griesemer, Ken Thompson, and Rob Pike.  They first began thinking about seriously about creating a new language in September 2007, and they had some working compilers by January 2008.  In November 2009 Go became open source, and all continued development since then has been managed by a group called the _Go Programming Language Project_.
 ## Paradigm
+As far as a language paradigm is concerned, it is difficult to pin Go down.  It sits somewhere between Object Oriented and good 'ol Imperative, probably closer to the Object Oriented side.  While it has many of the conveniences and tools that we expect from an OO language, it is missing a few.  Namely, type inheritance.  In Go, types/classes don't inherit from eachother.
+```
+type car interface {
+  isParked() bool
+  drive() float64
+```
 
 ## Typing System
 
