@@ -13,6 +13,7 @@ type car interface {
   drive() float64
 ```
 ## Typing System
+Go is a strongly typed language
 Typing System – is the language strongly or weakly typed, are type declarations required, can a
 programmer create new types, and are functions first-class objects?
 
@@ -23,6 +24,7 @@ and repetition options?)
 ## Support For Data Abstractions
 Support for Data Abstractions – which abstractions are provided, how can a programmer create
 new ones?
+
 ## Syntax
 Syntax – think about the syntax used by your language. What are the syntax choices that appeal
 to you? Are there any syntactic choices that you’d like to see changed (why, and to what)?
