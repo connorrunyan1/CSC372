@@ -13,7 +13,7 @@ type car interface {
   drive() float64
 ```
 ## Typing System
-Go is a strongly typed language
+Go is a strongly typed language, and type declarations are required.
 Typing System – is the language strongly or weakly typed, are type declarations required, can a
 programmer create new types, and are functions first-class objects?
 
