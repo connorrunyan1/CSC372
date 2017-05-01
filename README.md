@@ -58,10 +58,9 @@ case 6:
   // if h had the value 6
 case 7,8:
   // Go lets you list multiple possibilities separated by commas
+}
 ```
-while loops. switch.  We even have goto statements!
-Control Structures – how can control flow be controlled? (That is, what are the languages selection
-and repetition options?)
+Go does not have a separate while keyword.  A for with a blank condition will loop eternally, so you'll have to include your own escape condition.  Go also has goto statements and labels.
 
 ## Support For Data Abstractions
 Support for Data Abstractions – which abstractions are provided, how can a programmer create
