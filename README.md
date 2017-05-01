@@ -15,15 +15,27 @@ type car interface {
 ## Typing System
 Go is a strongly typed language, and type declarations are required.  Here are a couple of examples.  Note that the type of a variable is given after its name.
 ```
-var radius float64 // declare a variable named radius of type float64
-var width, height int = 50, 60 // allows multiple declarations on one line like this
+var radius float64   // declare a variable named radius of type float64
+var width, height int = 50, 60   // allows multiple declarations on one line like this
 ```
 Go also allows a programmer to use the following shorthand variable declaration/initialization operator, which is smart enough to figure out the type on it's own if it can.
 ```
-message := "stringy literal" // since this is a string literal, Go knows I mean:
-                             // var message string = "stringy literal"
+message := "stringy literal"   // since this is a string literal, Go knows I mean:
+                               // var message string = "stringy literal"
 ```
-Furthermore, the programmer _can_ create new types.  
+A programmer can also create new types.  This is in contrast to C, where the closest you could get to a new type would have been just declaring a struct.  Go extends that idea by also allowing functions/methods to be part of a type defintion. Here is an example type definition:
+```
+
+```
+Go also allows a programmer to treat functions as first class objects (or in this case, first class types).  They work like any other value.  Here is an example:
+```
+func printHelloWorld() {
+  fmt.Println("Hello, World!")
+}
+
+v := printHelloWorld
+v()
+```
 Typing System – is the language strongly or weakly typed, are type declarations required, can a
 programmer create new types, and are functions first-class objects?
 
