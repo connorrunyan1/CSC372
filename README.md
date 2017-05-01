@@ -2,12 +2,15 @@
 * Authors: Connor Runyan & Jordan Siaha<br>
 * Compiler Used: [golang.org](https://golang.org/dl/)
 
+---
 ## History
 Go started originally as a personal side-project of a group of Google Engineers named Robert Griesemer, Ken Thompson, and Rob Pike.  They first began thinking about seriously about creating a new language in September 2007, and they had some working compilers by January 2008.  In November 2009 Go became open source, and all continued development since then has been managed by a group called the _Go Programming Language Project_.
 
+---
 ## Paradigm
 Go is an imperative language.  Since it was written with low-level systems programming in mind, it looks and feels a lot like C from a distance, so much so that it is often viewed as what C would have looked like if it was written in the current century.  While Go does pilfer many tools and ideas from other language paradigms, it is most definitely still an imperative language.
 
+---
 ## Typing System
 Go is a strongly typed language, and type declarations are required.  Here are a couple of examples.  Note that the type of a variable is given after its name.
 ```Go
@@ -54,6 +57,7 @@ v()
 ```
 The output of that above snippet would be `Hello, World!` printed out to console.  In Go, a function is like any other value.
 
+---
 ## Control Structures
 Go provides a fairly standard suite of control structures.  Naturally, we have the classic `for` loop.  While generally not interesting, it shows us some proof that programmers will still need their semicolon keys.
 ```Go
@@ -89,17 +93,21 @@ func printStuff() {
 }
 ```
 
+---
 ## Support For Data Abstractions // TODO
 As far as data abstractions, Go has examples of all 3 data abstraction types(Basic, Structured, Unit).  On the basic level, it has everything you would expect out of traditional variables.  You can manipulate data like integers or strings without having to deal with the individual bits and bytes directly.  For structured data abstractions, it has a similar suite as C. // TODO check textbook
 Support for Data Abstractions – which abstractions are provided, how can a programmer create
 new ones?
 
+---
 ## Syntax
 Go has an interesting syntax, since it mixes a lot a C style with the "backwards" declarations from the Pascal family of languages.  Personally, we're not huge fans of the 'backwards' typing.  While this is likely due to the history we have with C-family languages, we also think that the type of a variable can often be more important than its name, and should come first as such.
 
+---
 ## Semantics
 Go is a statically scoped language.  As many systems languages do, Go prioritizes execution speed and does everything it can at compile time to reach that goal.  Go supports only a few types of constants: characters, strings, booleans, and numeric values.  The key here is that the idea of 'numeric values' is actually pretty smart in Go.  While compiling, it doesn't make the numeric constant into a specific type until it hits an instruction that would force it to.  By doing this, the value will only gain a type when a programmer uses it.  Storage allocation (static vs stack vs heap) is unfortunately inplementation specific.  The general rule, however, is that the compiler will do what is called _escape analysis_ to try and decide if the entity can live on the stack or if it has to be allocated on the heap.  The general rule is that variables that can live on the stack will, with the heap being a backup.  Heap allocation is used for most of the reference types, since their usage might extend outside of the function they were created in.  Go is fully garbage collected.
 
+---
 ## Desirable Language Characteristics
 ### Efficiency
 Go puts a very substancial pressure on being efficient.  Their website describes both compilation cost and execution cost as being very important.  To hit these goals, Go has relied on both a very restrictive typing system and a lack of some advanced features.  One standout omitted feature is generics.  The Go Project site states that adding them would have a huge compile cost compared to their usefulness, and so they remain unimplemented.
@@ -123,6 +131,7 @@ dog = "string" // type mismatch, so compiler error
 dog := "string" // dog was originally an int, compiler error
 ```
 
+---
 ## Example Program
 #### Un-Weighted _k_ Nearest Neighbors
 ```Java
@@ -132,6 +141,8 @@ if(code.isWritten()){
   code.write();
 }
 ```
+
+---
 ## References
 * [The Go Language Project: Frequently Asked Questions](https://golang.org/doc/faq)
 * [Go at Google: Language Design in the Service of Software Engineering](https://talks.golang.org/2012/splash.article)
