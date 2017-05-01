@@ -101,6 +101,9 @@ Go has an interesting syntax, since it mixes a lot a C style with the "backwards
 Go is a statically scoped language.  As many systems languages do, Go prioritizes execution speed and does everything it can at compile time to reach that goal.  Go supports only a few types of constants: characters, strings, booleans, and numeric values.  The key here is that the idea of 'numeric values' is actually pretty smart in Go.  While compiling, it doesn't make the numeric constant into a specific type until it hits an instruction that would force it to.  By doing this, the value will only gain a type when a programmer uses it.  Storage allocation (static vs stack vs heap) is unfortunately inplementation specific.  The general rule, however, is that the compiler will do what is called _escape analysis_ to try and decide if the entity can live on the stack or if it has to be allocated on the heap.  The general rule is that variables that can live on the stack will, with the heap being a backup.  Heap allocation is used for most of the reference types, since their usage might extend outside of the function they were created in.  Go is fully garbage collected.
 
 ## Desirable Language Characteristics
+###Efficiency
+###Regularity
+###Security/Reliability
 Desirable Language Characteristics – In Topic 2, we covered four categories of language characteristics
 that are generally thought of as ‘desirable’: (i) Efficiency, (ii) Regularity, (iii) Security/Reliability,
 and (iv) Extensibility. Choose any three of these four, and discuss features of your
