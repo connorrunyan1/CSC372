@@ -81,11 +81,11 @@ case 7,8:
   // Go lets you list multiple possibilities separated by commas
 }
 ```
-Go does not have a separate `while` keyword.  A `for` with a blank condition will loop eternally, so you'll have to include your own escape condition.  Go also has `goto` statements and `labels`, for some reason.  One interesting addition is the `defer` statement.  A statement with the modifier `defer` on the front will evaluate any needed arguments immediately, but not actually execute until the function it is in finished executing first.  The following function will output `first second` to console.
+Go does not have a separate `while` keyword.  A `for` with a blank condition will loop eternally, so you'll have to include your own escape condition.  Go also has `goto` statements and labels, for some reason.  One interesting addition is the `defer` statement.  A statement with the modifier `defer` on the front will evaluate any needed arguments immediately, but not actually execute until the function it is in finished executing first.  The following function will output `First Second` to console.
 ```Go
 func printStuff() {
-  defer fmt.Print("second")
-  fmt.Print("first ")
+  defer fmt.Print("Second")
+  fmt.Print("First ")
 }
 ```
 
@@ -106,16 +106,17 @@ Go puts a very substancial pressure on being efficient.  Their website describes
 Go also focuses a lot on the cost of program maintenence.  Their site specifically mentioned that the original developers were not happy with C's dependency management, and the maze of inefficient .h files it creates.  Go has a very strict dependency management system.  So strict, that an unused import is actually a compile-time error.
 The odd one out is the cost of program creation.  The syntax of Go is very specific, very finicky, and very restrictive.  You can get anything you need to get done, but it will definitely feel somewhat roundabout compared to languages that give you a little bit more help.  This trait, however, is in line with the systems programming oriented focuses.
 ### Regularity
-Go is very similar to C or Java in terms of it's levels of generality and simplicity.  It generally does a good job, but carries over all of C's oddities, like the different ways to increment an integer.
+Go is very similar to C or Java in terms of it's levels of generality and simplicity.  It generally does a good job, but carries over many of C's oddities, like the different ways to increment an integer.
 Go does an exellent job of being highly orthogonal.  Constructs always work the same way, no matter where they are.  Depending on the construct, this even holds true when you start to introduce the parallel computing tools that Go offers.
 Uniformity/Syntax design is probably the weakest part of Go's regularity.  One place this is very clear to me was with semicolons.  The Go compiler is written to allow the programmer to omit semicolons in many situations.  The issue is that some situations where you still need them do exist, most notably in for loops.
 ### Security/Reliability
-This is where Go truely excels.  As a language written with systems programming in mind, security and reliability are extremely important.  It favors some insanely strict/strong typing rules.  One example we ran into is that you must explicitly cast an int (size left up to implementation) to an int64 (64 bit integer in any implementation).  Rather than attempt any type promotion or inferencing, it forces you to exactly specify.
+This is where Go truely excels.  As a language written with systems programming in mind, security and reliability are extremely important.  It favors some insanely strict/strong typing rules.  One example we ran into is that you must explicitly cast an `int` (size left up to implementation) to an `int64` (64 bit integer in any implementation).  Rather than attempt any type promotion or inferencing, it forces you to exactly specify.
 Go has some interesting ideas about exception handling.  It doesn't have exceptions in the traditional sense, and it also does not have any try/catch/finally type of structure.  Instead, it relies on multiple return values to handle errors.  You will commonly see code that looks like this:
 ```Go
 result, err = functionThatCanFail(a,b)
 ```
-Where you are expected to check out the value of `err`, the second return value, and handle it yourself from there.  While this is a little more work than friendly try/catch/finally,  Go does allow for aliasing.  Interestingly enough though, it won't let you reuse variable names in the same scope but with different types.  Example below:
+Where you are expected to check out the value of `err`, the second return value, and handle it yourself from there.  While this is a little more work than a try/catch/finally structure, it also supposedly reduces overhead.  
+Go does allow for aliasing.  Interestingly enough though, it won't let you reuse variable names in the same scope but with different types.  Example below:
 ```Go
 dog := 64
 dog = "string" // type mismatch, so compiler error
@@ -134,4 +135,4 @@ if(code.isWritten()){
 ## References
 * [The Go Language Project: Frequently Asked Questions](https://golang.org/doc/faq)
 * [Go at Google: Language Design in the Service of Software Engineering](https://talks.golang.org/2012/splash.article)
-* Reference 3
+* [The Go Blog: Defer, Panic, Recover](https://blog.golang.org/defer-panic-and-recover)
