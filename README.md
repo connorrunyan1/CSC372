@@ -6,12 +6,8 @@
 Go started originally as a personal side-project of a group of Google Engineers named Robert Griesemer, Ken Thompson, and Rob Pike.  They first began thinking about seriously about creating a new language in September 2007, and they had some working compilers by January 2008.  In November 2009 Go became open source, and all continued development since then has been managed by a group called the _Go Programming Language Project_.
 
 ## Paradigm
-Go is an imperative language.  Since it was written with low-level systems programming in mind, it looks and feels a lot like C from a distance, so much so that it is often viewed as what C would have looked like if it was written in the current century.  While it is an imperative language, its many changes/improvements from the  //TODO
-```
-type car interface {
-  isParked() bool
-  drive() float64
-```
+Go is an imperative language.  Since it was written with low-level systems programming in mind, it looks and feels a lot like C from a distance, so much so that it is often viewed as what C would have looked like if it was written in the current century.  While Go does pilfer many tools and ideas from other language paradigms, it is most definitely still an imperative language.
+
 ## Typing System
 Go is a strongly typed language, and type declarations are required.  Here are a couple of examples.  Note that the type of a variable is given after its name.
 ```
@@ -93,7 +89,7 @@ func printStuff() {
 }
 ```
 
-## Support For Data Abstractions
+## Support For Data Abstractions // TODO
 As far as data abstractions, Go has examples of all 3 data abstraction types(Basic, Structured, Unit).  On the basic level, it has everything you would expect out of traditional variables.  You can manipulate data like integers or strings without having to deal with the individual bits and bytes directly.  For structured data abstractions, it has a similar suite as C. // TODO check textbook
 Support for Data Abstractions – which abstractions are provided, how can a programmer create
 new ones?
