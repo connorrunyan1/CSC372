@@ -36,10 +36,30 @@ func printHelloWorld() {
 v := printHelloWorld
 v()
 ```
-Typing System – is the language strongly or weakly typed, are type declarations required, can a
-programmer create new types, and are functions first-class objects?
+The output of that above snippet would be "Hello, World!" printed out to console.  In Go, a function is like any other value.
 
 ## Control Structures
+Go provides a fairly standard suite of control structures.  We have the classic for loop.
+The classic if/else/else if branching structure works like one would expect, as does the oft-overlooked switch statement.  Here is an example of those two:
+```
+if 5*5 == 25 {
+  // this code is skipped if 5*5 isn't 25.
+} else if 4 * 4 == 16 {
+  // else if chaining works just like in C.
+} else {
+  // final catch-all else statement.
+}
+
+h := 7
+switch h {
+case 5:
+  // if h had the value 5
+case 6:
+  // if h had the value 6
+case 7,8:
+  // Go lets you list multiple possibilities separated by commas
+```
+while loops. switch.  We even have goto statements!
 Control Structures – how can control flow be controlled? (That is, what are the languages selection
 and repetition options?)
 
