@@ -6,14 +6,23 @@
 Go started originally as a personal side-project of a group of Google Engineers named Robert Griesemer, Ken Thompson, and Rob Pike.  They first began thinking about seriously about creating a new language in September 2007, and they had some working compilers by January 2008.  In November 2009 Go became open source, and all continued development since then has been managed by a group called the _Go Programming Language Project_.
 
 ## Paradigm
-As far as a language paradigm is concerned, it is difficult to pin Go down.  It sits somewhere between Object Oriented and good 'ol Imperative, probably closer to the Object Oriented side.  While it has many of the conveniences and tools that we expect from an OO language, it is missing a few.  Namely, type inheritance.  In Go, types/classes don't inherit from eachother.
+Go is an imperative language.  Since it was written with low-level systems programming in mind, it looks and feels a lot like C from a distance, so much so that it is often viewed as what C would have looked like if it was written in the current century.  While it is an imperative language, its many changes/improvements from the  //TODO
 ```
 type car interface {
   isParked() bool
   drive() float64
 ```
 ## Typing System
-Go is a strongly typed language, and type declarations are required.
+Go is a strongly typed language, and type declarations are required.  Here are a couple of examples.  Note that the type of a variable is given after its name.
+```
+var radius float64 // declare a variable named radius of type float64
+var width, height int = 50, 60 // allows multiple declarations on one line like this
+```
+Go also allows a programmer to use the following shorthand variable declaration/initialization operator, which is smart enough to figure out the type on it's own if it can.
+```
+message := "stringy literal" // since this is a string literal, Go knows I mean:  var message string = "stringy literal"
+```
+Furthermore, the programmer _can_ create new types.  
 Typing System – is the language strongly or weakly typed, are type declarations required, can a
 programmer create new types, and are functions first-class objects?
 
