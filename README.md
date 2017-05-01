@@ -39,7 +39,7 @@ p := Point{5,6}
 sum(p) // returns 11
 
 // In Go, you can specifically bind a function to a type, called the reciever.
-// 
+// This makes the function into a method, with a specific type it belongs to.
 func (p Point) sum() float64 {
   return p.X + p.Y
 }
@@ -94,23 +94,22 @@ func printStuff() {
 ```
 
 ## Support For Data Abstractions
+As far as data abstractions, Go has examples of all 3 data abstraction types(Basic, Structured, Unit).  On the basic level, it has everything you would expect out of traditional variables.  You can manipulate data like integers or strings without having to deal with the individual bits and bytes directly.  For structured data abstractions, it has a similar suite as C. // TODO check textbook
 Support for Data Abstractions – which abstractions are provided, how can a programmer create
 new ones?
 
 ## Syntax
-Syntax – think about the syntax used by your language. What are the syntax choices that appeal
-to you? Are there any syntactic choices that you’d like to see changed (why, and to what)?
+Go has an interesting syntax, since it mixes a lot a C style with the "backwards" declarations from the Pascal family of languages.  Personally, we're not huge fans of the 'backwards' typing.  While this is likely due to the history we have with C-family languages, we also think that the type of a variable can often be more important than its name, and should come first as such.
 
 ## Semantics
-Semantics – briefly explain how your language is scoped (static or dynamic?), which kinds of constants
-are supported, how storage is allocated (which combination of static, stack-dynamic, and/or
-heap-dynamic?), and how garbage is managed.
+Go is a statically scoped language.  As many systems languages do, Go prioritizes execution speed and does everything it can at compile time to reach that goal.  Go supports only a few types of constants: characters, strings, booleans, and numeric values.  The key here is that the idea of 'numeric values' is actually pretty smart in Go.  While compiling, it doesn't make the numeric constant into a specific type until it hits an instruction that would force it to.  By doing this, the value will only gain a type when a programmer uses it.  Storage allocation (static vs stack vs heap) is unfortunately inplementation specific.  The general rule, however, is that the compiler will do what is called _escape analysis_ to try and decide if the entity can live on the stack or if it has to be allocated on the heap.  The general rule is that variables that can live on the stack will, with the heap being a backup.  Heap allocation is used for most of the reference types, since their usage might extend outside of the function they were created in.  Go is fully garbage collected.
 
 ## Desirable Language Characteristics
 Desirable Language Characteristics – In Topic 2, we covered four categories of language characteristics
 that are generally thought of as ‘desirable’: (i) Efficiency, (ii) Regularity, (iii) Security/Reliability,
 and (iv) Extensibility. Choose any three of these four, and discuss features of your
 language that support (or limit!) them.
+
 
 ## Example Program
 #### Un-Weighted _k_ Nearest Neighbors
