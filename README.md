@@ -44,7 +44,7 @@ p := Point{5,6}
 p.sum() // returns 11
 ```
 Go also allows a programmer to treat functions as first class objects (or in this case, first class types).  They work like any other value.  Here is an example:
-```
+```Go
 func printHelloWorld() {
   fmt.Println("Hello, World!")
 }
@@ -56,13 +56,13 @@ The output of that above snippet would be "Hello, World!" printed out to console
 
 ## Control Structures
 Go provides a fairly standard suite of control structures.  Naturally, we have the classic for loop.  While generally not interesting, it shows us some proof that programmers will still need their semicolon keys.
-```
+```Go
 for i:= 0; i < 10; i++ {
   sum += i
 }
 ```
 The classic if/else/else if branching structure works like one would expect, as does the oft-overlooked switch statement.  Here is an example of those two:
-```
+```Go
 if 5*5 == 25 {
   // this code is skipped if 5*5 isn't 25.
 } else if 4 * 4 == 16 {
@@ -82,7 +82,7 @@ case 7,8:
 }
 ```
 Go does not have a separate while keyword.  A for with a blank condition will loop eternally, so you'll have to include your own escape condition.  Go also has goto statements and labels, for some reason.  One interesting addition is the _defer_ statement.  A statement with the modifier _defer_ on the front will evaluate any needed arguments immediately, but not actually execute until the function it is in finished executing first.  The following function will output "first second" to console.
-```
+```Go
 func printStuff() {
   defer fmt.Print("second")
   fmt.Print("first ")
@@ -109,7 +109,7 @@ language that support (or limit!) them.
 
 ## Example Program
 #### Un-Weighted _k_ Nearest Neighbors
-```
+```Java
 if(code.isWritten()){
   this.replace(code);
 } else {
