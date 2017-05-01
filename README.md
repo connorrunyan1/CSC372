@@ -10,17 +10,17 @@ Go is an imperative language.  Since it was written with low-level systems progr
 
 ## Typing System
 Go is a strongly typed language, and type declarations are required.  Here are a couple of examples.  Note that the type of a variable is given after its name.
-```
+```Go
 var radius float64   // declare a variable named radius of type float64
 var width, height int = 50, 60   // allows multiple declarations on one line like this
 ```
 Go also allows a programmer to use the following shorthand variable declaration/initialization operator, which is smart enough to figure out the type on it's own if it can.
-```
+```Go
 message := "stringy literal"   // since this is a string literal, Go knows I mean:
                                // var message string = "stringy literal"
 ```
 A programmer can also create new types.  This is in contrast to C, where the closest you could get to a new type would have been just declaring a struct.  Go extends that idea by letting a function definition specifiy what is called a _reciver_, in other words, the type that a function should operate on. Here is an example type definition, and then two different ways to write a function that makes use of it.
-```
+```Go
 type Point struct {
   X, Y float64
 }
