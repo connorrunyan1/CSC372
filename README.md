@@ -134,11 +134,23 @@ dog := "string" // dog was originally an int, compiler error
 ---
 ## Example Program
 #### Un-Weighted _k_ Nearest Neighbors
-```Java
-if(code.isWritten()){
-  this.replace(code);
-} else {
-  code.write();
+```Go
+// sorted points list from before
+points[]
+var results[]Point
+
+results.append(points[0])
+results.append(points[0])
+
+stillPulling = true
+
+for stillPulling {
+  if points[0].d == points[1].d {
+    results.append(points[0])
+   } else {
+    results.append(points[0])
+    stillPulling = false
+    }
 }
 ```
 
@@ -147,3 +159,24 @@ if(code.isWritten()){
 * [The Go Language Project: Frequently Asked Questions](https://golang.org/doc/faq)
 * [Go at Google: Language Design in the Service of Software Engineering](https://talks.golang.org/2012/splash.article)
 * [The Go Blog: Defer, Panic, Recover](https://blog.golang.org/defer-panic-and-recover)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
