@@ -23,9 +23,29 @@ Go also allows a programmer to use the following shorthand variable declaration/
 message := "stringy literal"   // since this is a string literal, Go knows I mean:
                                // var message string = "stringy literal"
 ```
-A programmer can also create new types.  This is in contrast to C, where the closest you could get to a new type would have been just declaring a struct.  Go extends that idea by also allowing functions/methods to be part of a type defintion. Here is an example type definition:
+A programmer can also create new types.  This is in contrast to C, where the closest you could get to a new type would have been just declaring a struct.  Go extends that idea by letting a function definition specifiy what is called a _reciver_, in other words, the type that a function should operate on. Here is an example type definition, and then two different ways to write a function that makes use of it.
 ```
+type Point struct {
+  X, Y float64
+}
 
+// If you were in C, this sort of function would be your only option.
+// It has to take the point you want as an argument.
+func sum(p Point) float64 {
+  return p.X + p.Y
+}
+// To invoke the above:
+p := Point{5,6}
+sum(p) // returns 11
+
+// In Go, you can specifically bind a function to a type, called the reciever.
+// 
+func (p Point) sum() float64 {
+  return p.X + p.Y
+}
+// To invoke the above:
+p := Point{5,6}
+p.sum() // returns 11
 ```
 Go also allows a programmer to treat functions as first class objects (or in this case, first class types).  They work like any other value.  Here is an example:
 ```
@@ -39,7 +59,12 @@ v()
 The output of that above snippet would be "Hello, World!" printed out to console.  In Go, a function is like any other value.
 
 ## Control Structures
-Go provides a fairly standard suite of control structures.  We have the classic for loop.
+Go provides a fairly standard suite of control structures.  Naturally, we have the classic for loop.  While generally not interesting, it shows us some proof that programmers will still need their semicolon keys.
+```
+for i:= 0; i < 10; i++ {
+  sum += i
+}
+```
 The classic if/else/else if branching structure works like one would expect, as does the oft-overlooked switch statement.  Here is an example of those two:
 ```
 if 5*5 == 25 {
@@ -60,7 +85,13 @@ case 7,8:
   // Go lets you list multiple possibilities separated by commas
 }
 ```
-Go does not have a separate while keyword.  A for with a blank condition will loop eternally, so you'll have to include your own escape condition.  Go also has goto statements and labels.
+Go does not have a separate while keyword.  A for with a blank condition will loop eternally, so you'll have to include your own escape condition.  Go also has goto statements and labels, for some reason.  One interesting addition is the _defer_ statement.  A statement with the modifier _defer_ on the front will evaluate any needed arguments immediately, but not actually execute until the function it is in finished executing first.  The following function will output "first second" to console.
+```
+func printStuff() {
+  defer fmt.Print("second")
+  fmt.Print("first ")
+}
+```
 
 ## Support For Data Abstractions
 Support for Data Abstractions – which abstractions are provided, how can a programmer create
