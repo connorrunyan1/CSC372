@@ -20,7 +20,8 @@ var width, height int = 50, 60 // allows multiple declarations on one line like 
 ```
 Go also allows a programmer to use the following shorthand variable declaration/initialization operator, which is smart enough to figure out the type on it's own if it can.
 ```
-message := "stringy literal" // since this is a string literal, Go knows I mean:  var message string = "stringy literal"
+message := "stringy literal" // since this is a string literal, Go knows I mean:
+                             // var message string = "stringy literal"
 ```
 Furthermore, the programmer _can_ create new types.  
 Typing System – is the language strongly or weakly typed, are type declarations required, can a
