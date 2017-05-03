@@ -137,22 +137,40 @@ dog := "string" // dog was originally an int, compiler error
 ```Go
 // sorted points list from before
 points[]
-var results[]Point
+var Atype int64 = 0
+var Btype int64 = 0
 
-results.append(points[0])
-results.append(points[1])
-results.append(points[2])
+if allPoints[0].c = "A"
+  Atype++
+else 
+  Btype++
+  
+if allPoints[1].c = "A"
+  Atype++
+else 
+  Btype++
+  
+if allPoints[2].c = "A"
+  Atype++
+else 
+  Btype++
 
-int index = 3
+var index int64 = 0
 stillPulling = true
 
 for stillPulling {
-  if points[2].d == points[index].d {
-    results.append(points[index])
+  if allPoints[2].d == allPoints[index].d {
+    if allPoints[index].c = "A"
+      Atype++
+    else 
+      Btype++
     index++
    } else {
     stillPulling = false
    }
+   // at this point Atype and Btype are correct
+   
+   
 }
 ```
 
