@@ -135,7 +135,6 @@ dog := "string" // dog was originally an int, compiler error
 ---
 ## Example Program
 #### [Un-Weighted _k_ Nearest Neighbors](https://github.com/connorrunyan1/CSC372/blob/master/knn.go)
-
 This program will take 3 files: set1.txt, set2.txt, and test.txt.  It will print out data for each point, as well as the result of the knn comparison.  It will also print a graphical representation for each step.
 ---
 ## References
