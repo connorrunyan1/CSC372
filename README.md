@@ -1,3 +1,6 @@
+<!--- This Page is formatted using the Github Markdown language.   For a super  --->
+<!--- easy to read version please visit https://connorrunyan1.github.io/CSC372/ --->
+
 # Go: A Language Exploration
 * Authors: Connor Runyan & Jordan Siaha<br>
 * Compiler Used: [golang.org](https://golang.org/dl/)
