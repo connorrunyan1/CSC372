@@ -94,10 +94,8 @@ func printStuff() {
 ```
 
 ---
-## Support For Data Abstractions // TODO
-As far as data abstractions, Go has examples of all 3 data abstraction types(Basic, Structured, Unit).  On the basic level, it has everything you would expect out of traditional variables.  You can manipulate data like integers or strings without having to deal with the individual bits and bytes directly.  For structured data abstractions, it has a similar suite as C. // TODO check textbook
-Support for Data Abstractions – which abstractions are provided, how can a programmer create
-new ones?
+## Support For Data Abstractions
+As far as data abstractions, Go has examples of all 3 data abstraction types(Basic, Structured, Unit).  On the basic level, it has everything you would expect out of traditional variables.  You can manipulate data like integers or strings without having to deal with the individual bits and bytes directly.  For structured data abstractions, it has a similar suite as C, including arrays, structs, and some more complicated tools like slices and maps.  For unit abstraction, it has many of the conveniences of object oriented languages, with modifiers on declarations letting variables be exported or not (public vs private).  Go is pretty cool in this regard, as variables that start with a capital letter are public, with others private.
 
 ---
 ## Syntax
