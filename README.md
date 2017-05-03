@@ -140,17 +140,19 @@ points[]
 var results[]Point
 
 results.append(points[0])
-results.append(points[0])
+results.append(points[1])
+results.append(points[2])
 
+int index = 3
 stillPulling = true
 
 for stillPulling {
-  if points[0].d == points[1].d {
-    results.append(points[0])
+  if points[2].d == points[index].d {
+    results.append(points[index])
+    index++
    } else {
-    results.append(points[0])
     stillPulling = false
-    }
+   }
 }
 ```
 
