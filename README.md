@@ -131,71 +131,10 @@ dog := "string" // dog was originally an int, compiler error
 
 ---
 ## Example Program
-#### Un-Weighted _k_ Nearest Neighbors
-```Java
-package meme;
-
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
-import java.util.Random;
-
-public class gen {
-
-	public static void main(String[] args) throws FileNotFoundException{
-		Random rand = new Random();
-		PrintWriter pw1 = new PrintWriter("set1.txt");
-		PrintWriter pw2 = new PrintWriter("set2.txt");
-		PrintWriter pw3 = new PrintWriter("test.txt");
-		
-		pw1.print(rand.nextInt(50) + "," + rand.nextInt(50));	
-		
-		for(int i = 0; i < rand.nextInt(49); i++){
-			pw1.print("," + rand.nextInt(50) + "," + rand.nextInt(50));		
-		}		
-		
-		pw2.print(rand.nextInt(50) + "," + rand.nextInt(50));
-		
-		for(int i = 0; i < rand.nextInt(49); i++){
-			pw2.print(rand.nextInt(50) + "," + rand.nextInt(50) + ",");		
-		}
-		
-		pw3.print(rand.nextInt(50) + "," + rand.nextInt(50));	
-		
-		for(int i = 0; i < rand.nextInt(49); i++){
-			pw3.print(rand.nextInt(50) + "," + rand.nextInt(50) + ",");		
-		}		
-		
-		pw1.close();
-		pw2.close();
-		pw3.close();		
-	}	
-}
-
-```
+#### [Un-Weighted _k_ Nearest Neighbors](https://github.com/connorrunyan1/CSC372/blob/master/gen.java)
 
 ---
 ## References
 * [The Go Language Project: Frequently Asked Questions](https://golang.org/doc/faq)
 * [Go at Google: Language Design in the Service of Software Engineering](https://talks.golang.org/2012/splash.article)
 * [The Go Blog: Defer, Panic, Recover](https://blog.golang.org/defer-panic-and-recover)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
