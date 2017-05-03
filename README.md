@@ -134,7 +134,7 @@ dog := "string" // dog was originally an int, compiler error
 
 ---
 ## Example Program
-#### [Un-Weighted _k_ Nearest Neighbors](https://github.com/connorrunyan1/CSC372/blob/master/gen.java)
+#### [Un-Weighted _k_ Nearest Neighbors](https://github.com/connorrunyan1/CSC372/blob/master/knn.go)
 
 ---
 ## References
