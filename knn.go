@@ -6,7 +6,7 @@ package main
  *
  * Authors: Jordan L. Siaha and Connor Runyan
  * Class: CSc 372 Final Project
- * Written in: go language
+ * Written in: the GO language [golang.org](https://golang.org/dl/)
  */
 import (
     "fmt"
